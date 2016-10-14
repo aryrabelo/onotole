@@ -163,6 +163,7 @@ module Onotole
 
     def add_activeadmin_gem
       inject_into_file('Gemfile', "\ngem 'activeadmin', github: 'activeadmin'", after: '# user_choice')
+      inject_into_file('Gemfile', "\ngem 'inherited_resources', github: 'activeadmin/inherited_resources'", after: '# user_choice')
       inject_into_file('Gemfile', "\ngem 'kaminari-i18n'", after: '# user_choice')
       copy_file 'activeadmin.en.yml', 'config/locales/activeadmin.en.yml'
       copy_file 'activeadmin.ru.yml', 'config/locales/activeadmin.ru.yml'
